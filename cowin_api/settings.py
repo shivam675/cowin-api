@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-096sov01ndv$%(7@$r-a1dc9p0l0#b7_gy^10z-!^ff9w72+(a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','randomchat.pythonanywhere.com']
 
 
 # Application definition
