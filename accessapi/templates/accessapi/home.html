@@ -1,0 +1,35 @@
+{% extends 'accessapi/base.html' %}
+
+
+{% block content %}
+<h1 class="text-center">Cowni Vaccination checklist</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+      <div class="container-sm">
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endif %}
+        <form class="form-control" method="POST">
+          {% csrf_token %}
+          <div class="input-group mb-3">
+            <span class="input-group-text">P</span>
+            <span class="input-group-text">Pincode</span>
+            <input type="number" class="form-control" id="pincode" name="pincode" maxlength="6">
+          </div>
+          Date in : dd-mm-yyyy
+          <div class="input-group mb-3">
+
+            <span class="input-group-text">D</span>
+            <span class="input-group-text">Date</span>
+            <input type="text" class="form-control" id="date" name="date" maxlength="10">
+          </div>
+          <br>
+          <br>
+          <input class="btn btn-warning" type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}

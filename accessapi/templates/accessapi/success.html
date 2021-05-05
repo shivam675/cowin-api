@@ -1,0 +1,36 @@
+{% extends 'accessapi/base.html' %}
+
+
+{% block content %}
+<h1 class="text-center">
+<button type="button" class="btn btn-success btn-lg">Success !! got locations </button>
+</h1>
+
+<br>
+<br>
+<br>
+
+<div class="container-sm">
+{% for res in result.sessions %}
+
+    <br>
+
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success" aria-current="true">Name : {{ res.name }}</li>
+  <li class="list-group-item list-group-item-warning">Adress : {{ res.address }}</li>
+  <li class="list-group-item">Pincode : {{ res.pincode }}</li>
+  <li class="list-group-item">Free Type : {{ res.fee_type }}</li>
+  <li class="list-group-item">Date : {{ res.date }}</li>
+  <li class="list-group-item">Available Capacity : {{ res.available_capacity }}</li>
+  <li class="list-group-item">Min Age Limit : {{ res.min_age_limit }}</li>
+  <li class="list-group-item list-group-item-danger">Vaccine : {{ res.vaccine }}</li>
+  <li class="list-group-item list-group-item-dark">Slots : {{ res.slots }}</li>
+</ul>
+
+   <br>
+   <br>
+   <br>
+{% endfor %}
+</div>
+
+{% endblock %}
