@@ -15,8 +15,8 @@ def home(request):
     if request.method == 'POST':
         pin = request.POST.get('pincode')
         date =  request.POST.get('date')
-        result = requests.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+ pin +'&date='+ date).json()
-        print(result)
+        result = requests.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+ str(pin) +'&date='+ str(date)).json()
+        # print(result)
         error = 'Invalid Pincode'
         if result == {'errorCode': 'APPOIN0018', 'error': 'Invalid Pincode'}:
             return render(request, 'accessapi/home.html', {'error':error})
