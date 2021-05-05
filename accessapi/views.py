@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-import json
+# import json
 from .models import check
 # Create your views here.
 
